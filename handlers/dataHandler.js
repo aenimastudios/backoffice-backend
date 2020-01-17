@@ -4,22 +4,22 @@ const db = require('../db/db.js');
 const inSchema = joi.object({
     terminalId: joi.number().integer().required(),
     date: joi.date().required(),
-    value: joi.number().required()
+    value: joi.number().integer().required()
 });
 
 const outSchema = joi.object({
     terminalId: joi.number().integer(),
     issueDate: joi.date().required(),
     expDate: joi.date().required(),
-    value: joi.number().required(),
+    value: joi.number().integer().required(),
 });
 
 const cashSchema = joi.array().items(
-        joi.object({
-            date: joi.date().required(),
-            value: joi.number().required(),
-            terminalId: joi.number().integer().required(),
-            type: joi.number().integer().required()
+    joi.object({
+        date: joi.date().required(),
+        value: joi.number().integer().required(),
+        terminalId: joi.number().integer().required(),
+        type: joi.number().integer().required()
     })
 ); 
 

@@ -9,7 +9,7 @@ test('inOperation saves to database', async () => {
     const data = {
         terminalId,
         date,
-        value: 123.12
+        value: 123
     }
 
     console.log(data);
@@ -26,7 +26,7 @@ test('inOperation saves to database', async () => {
         terminalId,
         issueDate: date,
         expDate: date,
-        value: 321.12
+        value: 321
     }
 
     console.log(data);
@@ -41,7 +41,7 @@ test('inOperation saves to database', async () => {
 test('cashOperation saves to database', async () => {
     const data = [{
         date,
-        value: 432.32,
+        value: 432,
         terminalId,
         type: 1
     }];
